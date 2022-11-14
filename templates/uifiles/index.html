@@ -1,0 +1,115 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>header page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/swiper.css' %}">
+
+
+</head>
+
+<body>
+  <main>
+    <div class="preloader"></div>
+    <div class="full_page_view"></div>
+    <div class="social_page">
+      <div class="social-blocks">
+        <div class="social-item"><a href="https://www.facebook.com/aperturart"><i class="fab fa-brands fa-facebook-f"></i></a></div>
+        <div class="social-item"><a href="https://www.instagram.com/aperturart"><i class="fab fa-brands fa-instagram"></i></a></div>
+        <div class="social-item"><i class="fab fa-brands fa-twitter"></i></div>
+        <div class="social-item"><i class="fab fa-brands fa-linkedin-in"></i></div>
+      </div>
+    </div>
+    <div class="main-page">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <nav class="navbar top-navbar">
+          <div class="container-fluid logo-container ">
+            <div class="logo">
+              <a class="navbar-brand" href="#">
+                <img src="{% static 'img/main-img/aperture-logo.png' %}" alt="logoimg" width="250px" height="200px" style="margin-top:-55px;">
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="swiper-wrapper">
+          {% for item in sliding_item %}
+            <div class="swiper-slide">
+              <div class="swiper-img1">
+                <img src="{{ item.Image }}" alt="">
+                <div class="slider-content" style="z-index:100 !important ;">
+                  <h4 data-aos="fade-right">{{ item.Title }}</h4>
+                  <p>{{ item.Description }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          <!-- <div class="swiper-slide">
+            <div class="swiper-img2">
+              <div class="slider-content">
+                <h4 data-aos="fade-right" style="color:whitesmoke">MYSTERY SAPHIRA</h4>
+                <p style="color:whitesmoke">DONEC CONVALLIS, AUGUE NON FACILISIS RUTRUM, DIAM NEQUE</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-img3">
+              <div class="slider-content">
+                <h4 data-aos="fade-right" style="color:rgb(12, 12, 12)">XXX-MATIC</h4>
+                <p style="color:rgb(5, 5, 5)">MAECENAS ALIQUET, RISUS NEC EGESTAS FINIBUS, EROS AMET.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-img4">
+              <div class="slider-content">
+                <h4 data-aos="fade-right">BLACK LIPS</h4>
+                <p>PORTTITOR LIGULA, EU ACCUMSAN QUAM ERAT SIT AMET RISUS.</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
+    </div>
+  </main>
+  <nav class="navbar  footert-nav" id="footernavbar">
+    <div class="container footer-icons">
+      <div class="button-link">
+        <span type="btn" id="share-btn" class="material-symbols-outlined">share</span>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="play"><i class="fas fa-play"></i></div>
+      <div class="paus"><i class="fas  fa-regular fa-pause"></i></div>
+      <div class="swiper-button-prev"></div>
+      <div class="button-full"><span type="btn" id="full-screen-btn" class="material-symbols-outlined">
+          zoom_out_map
+        </span></div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"
+    integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="{% static 'js/swiper.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
