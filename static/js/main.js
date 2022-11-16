@@ -20,12 +20,13 @@ social_popup.addEventListener('click', function(e){
     social_popup.style.cursor = 'pointer';
 })
 
-// full screen  btton
+// full screen  button
 let footer_navbar = document.querySelector('#footernavbar');
 let view_full_screen = document.querySelector('.full_page_view');
 let full_screen = document.querySelector('#full-screen-btn');
 full_screen.addEventListener('click', function(){
     $("#footernavbar").hide();
+    view_full_screen.style.cursor = "crosshair";
     view_full_screen.style.visibility='visible';
     $(".full_page_view").click(function() {
         $("#footernavbar").show();

@@ -102,13 +102,13 @@
     left: 49.3%;
     font-size: 18px;
     cursor: pointer;
+    display: none;
     
   }
   .paus{
     position: absolute;
     left: 49.3%;
     font-size: 18px;
-    display: none;
     cursor: pointer;
   }
   .button-link{
