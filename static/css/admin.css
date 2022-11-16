@@ -1,0 +1,26 @@
+.login-box .card-body{
+    background-color: #869EBF !important;
+    border-radius: 10px !important;
+}
+.card-body p {
+    color: whitesmoke;
+}
+.login-box .btn {
+    color: whitesmoke;
+    background-image: linear-gradient(to right, rgb(206, 65, 176),rgb(126, 45, 169),rgb(76, 153, 179));
+    width: 30%;
+    margin-left: 150px !important;
+    text-align: center;
+}
+picture img{
+    margin-bottom: -20px !important;
+}
+
+element.style {
+    opacity: .8;
+}
+#jazzy-logo .brand-link .brand-image{
+    background-color: white  !important;
+    display: none !important;
+}
+/* #jazzy-logo  */
