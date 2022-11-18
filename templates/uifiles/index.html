@@ -27,8 +27,10 @@
     <div class="full_page_view"></div>
     <div class="social_page">
       <div class="social-blocks">
-        <div class="social-item"><a href="https://www.facebook.com/aperturart"><i class="fab fa-brands fa-facebook-f"></i></a></div>
-        <div class="social-item"><a href="https://www.instagram.com/aperturart"><i class="fab fa-brands fa-instagram"></i></a></div>
+        <div class="social-item"><a href="https://www.facebook.com/aperturart"><i
+              class="fab fa-brands fa-facebook-f"></i></a></div>
+        <div class="social-item"><a href="https://www.instagram.com/aperturart"><i
+              class="fab fa-brands fa-instagram"></i></a></div>
         <div class="social-item"><i class="fab fa-brands fa-twitter"></i></div>
         <div class="social-item"><i class="fab fa-brands fa-linkedin-in"></i></div>
       </div>
@@ -40,47 +42,24 @@
           <div class="container-fluid logo-container ">
             <div class="logo">
               <a class="navbar-brand" href="#">
-                <img src="{% static 'img/main-img/aperture-logo.png' %}" alt="logoimg" width="250px" height="200px" style="margin-top:-55px;">
+                <img src="{% static 'img/main-img/aperture-logo.png' %}" alt="logoimg" width="250px" height="200px"
+                  style="margin-top:-55px;">
               </a>
             </div>
           </div>
         </nav>
         <div class="swiper-wrapper">
           {% for item in sliding_item %}
-            <div class="swiper-slide">
-              <div class="swiper-img1">
-                <img src="{{ item.Image }}" alt="">
-                <div class="slider-content" style="z-index:100 !important ;">
-                  <h4 data-aos="fade-right">{{ item.Title }}</h4>
-                  <p>{{ item.Description }}</p>
-                </div>
+          <div class="swiper-slide">
+            <div class="swiper-img1" style="background-image:url({{item.Image}});">
+              <div class="slider-content" style="z-index:100 !important ;">
+                <h2 data-aos="fade-right">{{ item.Title }}</h2>
+                <p>{{ item.Description }}</p>
               </div>
             </div>
+          </div>
           {% endfor %}
-          <!-- <div class="swiper-slide">
-            <div class="swiper-img2">
-              <div class="slider-content">
-                <h4 data-aos="fade-right" style="color:whitesmoke">MYSTERY SAPHIRA</h4>
-                <p style="color:whitesmoke">DONEC CONVALLIS, AUGUE NON FACILISIS RUTRUM, DIAM NEQUE</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="swiper-img3">
-              <div class="slider-content">
-                <h4 data-aos="fade-right" style="color:rgb(12, 12, 12)">XXX-MATIC</h4>
-                <p style="color:rgb(5, 5, 5)">MAECENAS ALIQUET, RISUS NEC EGESTAS FINIBUS, EROS AMET.</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="swiper-img4">
-              <div class="slider-content">
-                <h4 data-aos="fade-right">BLACK LIPS</h4>
-                <p>PORTTITOR LIGULA, EU ACCUMSAN QUAM ERAT SIT AMET RISUS.</p>
-              </div>
-            </div>
-          </div> -->
+        
         </div>
 
         <!-- <div class="swiper-pagination"></div> -->
